@@ -2,7 +2,7 @@
 ollama使用指引(自用引导)
 
 注意AND显卡和NVIDIA显卡要下载不同的ollama版本，自行去[github下载](https://github.com/ollama/ollama)  
-还有一个[AMD特供版下载地址](https://github.com/likelovewant/ollama-for-amd),不知道是不是与上面的下载包一样，自行去验证
+还有一个[AMD特供版下载地址](https://github.com/likelovewant/ollama-for-amd),AMD好像都是用的这个特供版
 
 显卡支持列表:[官网查看](https://docs.ollama.com/gpu#amd-radeon)  
 如果不在官方支持列表，[请参考:](https://www.oneue.com/articles/2350.html)  
