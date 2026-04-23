@@ -6,7 +6,7 @@ ollama使用指引(自用引导)
 - 显卡支持列表:[官网查看](https://docs.ollama.com/gpu#amd-radeon)  
 - 如果不在官方支持列表，[请参考:](https://www.oneue.com/articles/2350.html)  --------------
 - AMD显卡可能会有不支持的情况，参考下面解决方案
-[AMD特制版下载地址]([https://github.com/likelovewant/ollama-for-amd](https://github.com/likelovewant/ollama-for-amd/releases)),AMD去这个地址下载文件并参考说明解压到指定目录（没看明白就参考下图）
+[AMD特制版下载地址](https://github.com/likelovewant/ollama-for-amd/releases),AMD去这个地址下载文件并参考说明解压到指定目录（没看明白就参考下图）
 - 执行替换前如已运行Ollama，请先退出原本正在运行的 Ollama（右下角托盘 -> Quit）
 1. 删除`C:\Users\用户名\AppData\Local\Programs\Ollama\lib\ollama\`目录下的这些文件
    ![图四](./images/4.png "图四")  
