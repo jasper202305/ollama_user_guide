@@ -1,6 +1,14 @@
 # ollama_user_guide
 ollama使用指引(自用引导)
 
+注意AND显卡和NVIDIA显卡要下载不同的ollama版本，自行去[github下载](https://github.com/ollama/ollama)  
+还有一个[AMD特供版下载地址](https://github.com/likelovewant/ollama-for-amd),不知道是不是与上面的下载包一样，自行去验证
+
+显卡支持列表:[官网查看](https://docs.ollama.com/gpu#amd-radeon)  
+如果不在官方支持列表，[请参考:](https://www.oneue.com/articles/2350.html)  
+执行`ollama ps`命令发现如下图CPU100%，[请参考](https://zhuanlan.zhihu.com/p/2024786075583804463)  
+![CPU100](./images/3.png "CPU100")  
+
 [ollama官网查看可用模型列表：](https://ollama.com/search)
 
 ### 查看模型列表：
