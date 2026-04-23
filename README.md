@@ -1,13 +1,24 @@
 # ollama_user_guide
 ollama使用指引(自用引导)
 
-注意AND显卡和NVIDIA显卡要下载不同的ollama版本，自行去[github下载](https://github.com/ollama/ollama)  
-显卡支持列表:[官网查看](https://docs.ollama.com/gpu#amd-radeon)  
-如果不在官方支持列表，[请参考:](https://www.oneue.com/articles/2350.html)  
+### 下载
+- 自行去[官网下载](https://ollama.com/download)，或者去[github下载](https://github.com/ollama/ollama)Ollama安装包  
+- 显卡支持列表:[官网查看](https://docs.ollama.com/gpu#amd-radeon)  
+- 如果不在官方支持列表，[请参考:](https://www.oneue.com/articles/2350.html)  --------------
+- AMD显卡可能会有不支持的情况，参考下面解决方案
+[AMD特制版下载地址]([https://github.com/likelovewant/ollama-for-amd](https://github.com/likelovewant/ollama-for-amd/releases)),AMD去这个地址下载文件并参考说明解压到指定目录（没看明白就参考下图）
+- 执行替换前如已运行Ollama，请先退出原本正在运行的 Ollama（右下角托盘 -> Quit）
+1. 删除`C:\Users\用户名\AppData\Local\Programs\Ollama\lib\ollama\`目录下的这些文件
+   ![图四](./images/4.png "图四")  
+2. 将下载好的ollama-windows-amd64.7z文件解压到`C:\Users\用户名\AppData\Local\Programs\Ollama\lib\ollama\`目录
+3. 删除`C:\Users\Administrator\AppData\Local\Programs\Ollama\lib\ollama\rocm\rocblas\`目录下的`library`目录
+4. 将从[ROCm库](https://github.com/likelovewant/ROCmLibs-for-gfx1103-AMD780M-APU/releases/tag/v0.6.4.2),(选择你显卡合适的版本,比如我就是RX6750系列的显卡，代号通常是gfx1031)下载好的文件`rocm.gfx1031.for.hip.6.4.2.7z`解压替换到对应位置  
+ - 压缩包内的`library`文件夹解压到 -> `C:\Users\Administrator\AppData\Local\Programs\Ollama\lib\ollama\rocm\rocblas\library`  
+ - 压缩包内的`rocblas.dll`替换 -> `C:\Users\Administrator\AppData\Local\Programs\Ollama\lib\ollama\rocm\`目录下的`rocblas.dll`
+5. 运行Ollama，不出意外就可以使用了
+   ![图五](./images/5.png "图五")  
 
-[AMD特供版下载地址]([https://github.com/likelovewant/ollama-for-amd](https://github.com/likelovewant/ollama-for-amd/releases)),AMD去这个地址下载文件并参考说明解压到指定目录
-
-执行`ollama ps`命令发现如下图CPU100%，[请参考](https://zhuanlan.zhihu.com/p/2024786075583804463)  
+NV显卡如果执行`ollama ps`命令发现如下图CPU100%，[请参考](https://zhuanlan.zhihu.com/p/2024786075583804463)  
 ![CPU100](./images/3.png "CPU100")  
 
 [ollama官网查看可用模型列表：](https://ollama.com/search)
